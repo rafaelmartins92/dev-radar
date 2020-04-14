@@ -1,6 +1,7 @@
 const axios = require('axios')
 const Dev = require('../models/Dev')
 const parseStringAsArray = require('../utils/parseStringAsArray')
+const { findConnections, sendMessage } = require('../websocket')
 
 module.exports = {
   async index(request, response) {
@@ -34,37 +35,18 @@ module.exports = {
         techs: techsArray,
         location,
       })
+
+      // Filtrar as conexões que estão há no máximo de 10km de distância
+      // e que o novo deve tenha pelo menos uma das techs filtradas
+
+      const sendSocketMesssageTo = findConnections(
+        { latitude, longitude },
+        techsArray,
+      )
+
+      sendMessage(sendSocketMesssageTo, 'new-dev', dev)
     }
     
     return response.json(dev)
   },
-
-  async update(req, res) {
-    const { id } = req.params;
-    let { techs, latitude, longitude, ...dataToUpdate } = req.body;
-    
-    if (dataToUpdate.github_username) 
-      delete dataToUpdate.github_username 
-
-    if (longitude && latitude) 
-      dataToUpdate.location = {
-        type: "Point",
-        coordinates: [longitude, latitude]
-      };
-
-    if (techs)
-      dataToUpdate.techs = parseStringAsArray(techs);
-
-    const dev = await Dev.findByIdAndUpdate(id, dataToUpdate, { new: true });
-
-    return res.json(dev);
-  },
-
-  async destroy(req, res) {
-    const { id } = req.params;
-
-    await Dev.findByIdAndDelete(id);
-
-    return res.json({ message: "ok" });
-  }
 }
