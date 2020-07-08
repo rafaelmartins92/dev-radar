@@ -3,6 +3,20 @@
     <br>
 </h1>
 
+<p align="center">
+  <a href="https://www.linkedin.com/in/rafael-martins92/">
+  <img alt="Made By" src="https://img.shields.io/static/v1?label=Made%20By&message=Rafael%20Martins&color=orange&style=for-the-badge">
+	</a>
+  
+  <img alt="Languages" src="https://img.shields.io/github/languages/count/rafaelmartins92/dev-radar?style=for-the-badge">
+  
+  <img alt="Top Language" src="https://img.shields.io/github/languages/top/rafaelmartins92/dev-radar?style=for-the-badge">
+  
+  <img alt="Repo Size" src="https://img.shields.io/github/repo-size/rafaelmartins92/dev-radar?style=for-the-badge">
+  
+  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/rafaelmartins92/dev-radar?style=for-the-badge">
+</p>
+
 <h4 align="center">
   <p>Find the perfect Dev!</p>
   
