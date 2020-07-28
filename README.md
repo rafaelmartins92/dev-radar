@@ -33,8 +33,7 @@
 </p>
 
 <p align="center">
-  <img alt="Sign Up" src="https://ik.imagekit.io/rafaelmartins/signin_-By_gPvo-.gif">
-  <img alt="Open Github" src="https://ik.imagekit.io/rafaelmartins/open-github_G7MVhfBRE.gif">
+  <img alt="Scene" src="https://ik.imagekit.io/rafaelmartins/Portfolio/portfolio-scene---dev-radar_2x_tNy7HvBpcz.png">
   <img alt="Mobile" src="https://ik.imagekit.io/rafaelmartins/mobile_vDcnH8Vxi.gif">
 
 </p>
